@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Suppress browser request for favicon.ico -->
+    <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,">
+    
+    <title>SPIFFS Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <style type="text/css" media="screen">
+      @@include(@@pageSS)
+    </style>
+    <script>
+      @@include(@@pageJS)
+    </script>
+    <script src="/ace.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body onload="onBodyLoad();">
+    <div id="uploader"></div>
+    <div id="tree"></div>
+    <div id="editor"></div>
+    <div id="preview" style="display:none;"></div>
+    <iframe id=download-frame style='display:none;'></iframe>
+  </body>
+</html>

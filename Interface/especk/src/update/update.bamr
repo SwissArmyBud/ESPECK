@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Suppress browser request for favicon.ico -->
+    <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,">
+
+    <title>ESP OTA Update</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- NOTE! Imports can also use notation @@include('../core/micro.css') and etc -->
+
+    <!-- IMPORT NORMALIZE CSS FRAMEWORK -->
+    <style>
+      @@include(@@coreNS)
+    </style>
+
+    <!-- IMPORT MICRO CSS FRAMEWORK -->
+    <style>
+      @@include(@@coreSS)
+    </style>
+    
+    <!-- IMPORT PAGE CSS STYLES -->
+    <style>
+      @@include(@@pageSS)
+    </style>
+
+  </head>
+
+  <body>
+
+  <header>
+    <div class="container">
+      <ul>
+        <div class="row twelve lead">
+          <div class="four columns offset-by-four textcenter">
+            <a href="/index.html"><button>Home</button></a>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container">
+      <div class="eight columns offset-by-two application textcenter">
+
+        <!-- TEXT HEADER -->
+        <h2 id="theme" class="textcenter lead">OTA Updates</h2>
+        <h4>ESP Firmware</h4>
+        <hr class="hrclassy"/>
+
+        <!-- SELECT BUTTON -->
+        <div class="container">
+          <div id="select_div" class="twelve columns collapsible-content">
+            <h5>Step 1:</h5>
+						<button type="button" id="select_button" class="big_button green">Select File</button>
+            <hr class="hrclassy"/>
+          </div>
+        </div>
+        <!-- SELECT BUTTON -->
+        <div class="container">
+          <div id="confirm_div" class="twelve columns collapsible-content">
+            <h5 style="margin-bottom:0px;">Confirm:</h5>
+            <p id="file_text">No File Selected.....</p>
+						<button type="button" id="flash_button" class="big_button red">Flash File</button>
+            <hr class="hrclassy"/>
+          </div>
+        </div>
+        <!-- SELECT BUTTON -->
+        <div class="container">
+          <div id="progress_div" class="eight columns offset-by-two collapsible-content">
+            <h5 style="margin-bottom:0px;">Flashing...</h5>
+              <div class="progress">
+                <div id="progressbar" class="progress-bar u-pull-left yellow" style="width:100%;"></div>
+              </div>
+              <hr class="hrclassy"/>
+          </div>
+        </div>
+
+        <!-- SELECT BUTTON -->
+        <div class="container">
+          <div id="wait_div" class="eight columns offset-by-two collapsible-content">
+            <h5 style="margin-bottom:0px;">Please Wait</h5>
+            <div class="loader"></div>
+          </div>
+        </div>
+
+        <form id="form" action='' method='post' enctype='multipart/form-data' style="visibility:hidden; height:5px;">
+          <input type='file' name='update' id="file_input">
+          <button type="submit" id="submit_button">Submit</button>
+        </form>
+
+      </div>
+    </div>
+
+
+    <!-- IMPORT MICRO JS FRAMEWORK -->
+    <script>
+      @@include(@@coreJS)
+    </script>
+
+  	<!-- IMPORT PAGE JS -->
+    <script>
+      @@include(@@pageJS)
+    </script>
+
+  </body>
+</html>

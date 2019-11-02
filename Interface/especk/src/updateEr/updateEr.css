@@ -1,0 +1,22 @@
+.progress {
+  width: 85%;
+  background-color: #e0e0e0;
+  padding: 3px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+  height: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progressbar {
+  display: block;
+  height: 25px;
+  background-color: #659cef;
+  border-radius: 3px;
+
+}
+
+#progressbar{
+  transition: width ease-in-out 1s;
+}

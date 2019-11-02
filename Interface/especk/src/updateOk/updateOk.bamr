@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Suppress browser request for favicon.ico -->
+    <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,">
+
+    <title>UPDATE SUCCESS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="refresh" content="10;URL=/index.html">
+
+    <!-- NOTE! Imports can also use notation @@include('../core/micro.css') and etc -->
+
+    <!-- IMPORT NORMALIZE CSS FRAMEWORK -->
+    <style>
+      @@include(@@coreNS)
+    </style>
+
+    <!-- IMPORT MICRO CSS FRAMEWORK -->
+    <style>
+      @@include(@@coreSS)
+    </style>
+
+    <!-- IMPORT PAGE CSS STYLES -->
+    <style>
+      @@include(@@pageSS)
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+        <div class="eight columns offset-by-two application textcenter">
+
+          <!-- TEXT HEADER -->
+          <h2 id="theme" class="textcenter lead">Update OK!</h2>
+
+          <!-- PROGRESS BAR -->
+          <div class="container">
+            <div id="progress_div" class="eight columns offset-by-two">
+              <h5 style="margin-bottom:0px;">Device Rebooting...</h5>
+                <div class="progress">
+                  <div id="progressbar" class="progress-bar u-pull-left green" style="width:10%;"></div>
+                </div>
+            </div>
+          </div>
+          <hr class="hrclassy"/>
+
+      </div>
+    </div>
+
+  <!-- IMPORT MICRO JS FRAMEWORK -->
+  <script>
+    @@include(@@coreJS)
+  </script>
+
+  <!-- IMPORT PAGE JS -->
+  <script>
+    @@include(@@pageJS)
+  </script>
+
+  </body>
+</html>

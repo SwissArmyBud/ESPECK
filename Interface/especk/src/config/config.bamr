@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Suppress browser request for favicon.ico -->
+    <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,">
+
+    <title>ESP WiFi Config</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- NOTE! Imports can also use notation @@include('../core/micro.css') and etc -->
+
+    <!-- IMPORT NORMALIZE CSS FRAMEWORK -->
+    <style>
+      @@include(@@coreNS)
+    </style>
+
+    <!-- IMPORT MICRO CSS FRAMEWORK -->
+    <style>
+      @@include(@@coreSS)
+    </style>
+
+    <!-- IMPORT PAGE CSS STYLES -->
+    <style>
+      @@include(@@pageSS) 
+    </style>
+    <!-- -->
+
+  </head>
+
+  <body>
+
+  <div class="container">
+      <div class="eight columns offset-by-two application textcenter">
+
+        <!-- TEXT HEADER -->
+        <h2 id="theme" class="textcenter lead">WiFi Configurator</h2>
+        <h4>Network Wizard</h4>
+        <hr class="hrclassy"/>
+
+        <!-- WAIT DIV -->
+        <div class="container">
+          <div id="wait_div" class="twelve columns collapsible-content">
+            <h5 id="wait_text">Wait for scan results...</h5>
+            <div class="loader" id="wait_loader"></div>
+            <hr class="hrclassy"/>
+          </div>
+        </div>
+
+        <!-- TABLE DIV -->
+        <div class="container">
+          <div id="networks_div" class="twelve columns collapsible-content">
+            <h5>Results:</h5>
+            <div id="table_div" class="twelve columns"></div>
+          </div>
+        </div>
+
+        <!-- SELECT BUTTON -->
+        <div class="container">
+          <div id="confirm_div" class="twelve columns collapsible-content">
+            <hr class="hrclassy"/>
+            <h5>Network:</h5>
+            <div class="twelve columns">
+
+              <input type="text" id="ssid_input" placeholder="SSID" class="eight offset-by-two columns"></input>
+              <input type="password" id="pass_input" placeholder="PASS" class="eight offset-by-two columns"></input>
+  						<button type="button" id="send_button" class="eight offset-by-two columns big_button green">Save</button>
+  						<button type="button" id="wpa_button" class="four offset-by-four columns red">WPA</button>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- IMPORT MICRO JS FRAMEWORK -->
+    <script>
+      @@include(@@coreJS)
+    </script>
+
+  	<!-- IMPORT PAGE JS -->
+    <script>
+      @@include(@@pageJS)
+    </script>
+
+  </body>
+</html>

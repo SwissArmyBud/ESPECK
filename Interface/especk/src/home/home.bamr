@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Suppress browser request for favicon.ico -->
+    <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,">
+
+    <title>BOX Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- NOTE! Imports can also use notation @@include('../core/micro.css') and etc -->
+
+    <!-- IMPORT NORMALIZE CSS FRAMEWORK -->
+    <style>
+      @@include(@@coreNS)
+    </style>
+
+    <!-- IMPORT MICRO CSS FRAMEWORK -->
+    <style>
+      @@include(@@coreSS)
+    </style>
+
+    <!-- IMPORT PAGE CSS STYLES -->
+    <style>
+      @@include(@@pageSS)
+    </style>
+
+  </head>
+
+  <body>
+
+      <div class="container">
+          <div class="eight columns offset-by-two application">
+            <!-- TEXT HEADER -->
+            <h1 id="theme" class="textcenter lead">Welcome...</h1>
+            <h4 class="textcenter">...to Appliance</h4>
+            <hr class="hrclassy"/>
+            <!-- SELECT BUTTON -->
+            <div class="textcenter">
+							<button id="stuff_button" type="button" class="big_button green">Stuff</button>
+            	<p class="lead" style="margin-top:0px;">This is stuff, and stuff</p>
+            </div>
+            <hr class="hrclassy"/>
+            <!-- SELECT BUTTON -->
+            <div class="textcenter">
+							<button id="button_button" type="button" class="big_button yellow">Button</button>
+            	<p class="lead" style="margin-top:0px;">When You Need To Button Up</p>
+            </div>
+            <hr class="hrclassy"/>
+            <!-- SELECT BUTTON -->
+            <div class="textcenter">
+              <input type="number" id="time_input" min="50" max="950" value="50"></input>
+              <div class="twelve columns">
+                <button id="request_button" type="button" class="big_button red">Set Blink</button>
+              </div>
+            	<p class="lead" style="margin-top:0px;">Send Data to Appliance</p>
+            </div>
+            <hr class="hrclassy"/>
+          </div>
+      </div>
+
+    <!-- IMPORT MICRO JS FRAMEWORK -->
+    <script>
+      @@include(@@coreJS)
+    </script>
+
+  	<!-- IMPORT PAGE JS -->
+    <script>
+      @@include(@@pageJS)
+    </script>
+
+  </body>
+</html>
